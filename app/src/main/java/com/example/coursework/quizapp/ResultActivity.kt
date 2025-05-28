@@ -17,6 +17,12 @@ class ResultActivity : AppCompatActivity() {
         val name = intent.getStringExtra("USER_NAME")
         val score = intent.getIntExtra("SCORE", 0)
         val total = intent.getIntExtra("TOTAL", 0)
+        val time = intent.getLongExtra("TIME", 0)
+
+
+
+        binding.timeText.text = "Completed in $time seconds"
+
 
         binding.playerNameText.text = name
         binding.scoreText.text = "Your Score: $score / $total"
