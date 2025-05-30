@@ -18,8 +18,7 @@ class QuestionActivity : AppCompatActivity() {
     private var quizStartTime: Long = 0L
     private lateinit var optionButtons: List<MaterialButton>
     private lateinit var userName: String
-
-    private val questions = QuestionData.questionList
+    private lateinit var questions: List<Question> // CHANGED from `val` to `lateinit var`
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,10 +27,18 @@ class QuestionActivity : AppCompatActivity() {
 
         userName = intent.getStringExtra("USER_NAME") ?: "Player"
 
-        optionButtons = listOf(
-            binding.option1, binding.option2, binding.option3, binding.option4
-        )
+        val category = intent.getStringExtra("CATEGORY") ?: "Flag"
+        val difficulty = intent.getStringExtra("DIFFICULTY") ?: "Easy"
 
+        questions = QuestionData.getFilteredQuestions(category, difficulty)
+
+        if (questions.isEmpty()) {
+            Toast.makeText(this, "No questions found for $category - $difficulty", Toast.LENGTH_LONG).show()
+            finish()
+            return
+        }
+
+        optionButtons = listOf(binding.option1, binding.option2, binding.option3, binding.option4)
         quizStartTime = System.currentTimeMillis()
         loadQuestion()
 
@@ -42,7 +49,16 @@ class QuestionActivity : AppCompatActivity() {
         }
     }
 
+
     private fun loadQuestion() {
+
+
+        val category = intent.getStringExtra("CATEGORY") ?: "Flag"
+        val difficulty = intent.getStringExtra("DIFFICULTY") ?: "Easy"
+
+
+        val questions = QuestionData.getFilteredQuestions(category, difficulty)
+
         val question = questions[currentIndex]
         binding.progressText.text = "Question ${question.number} of ${questions.size}"
         binding.questionText.text = question.questionText

@@ -1,0 +1,150 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DA291F01"
+    android:padding="24dp">
+
+    <Button
+        android:id="@+id/categoryFlag"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="Flags"
+        android:textSize="18dp"
+        android:textColor="@color/colorLightSecondaryDark"
+        android:backgroundTint="@color/colorLightPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/categoryGeneral"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/categoryScience"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorLightSecondaryDark"
+        android:backgroundTint="@color/colorLightPrimary"
+        android:layout_marginBottom="44dp"
+        android:textSize="18dp"
+        android:text="Science"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        tools:layout_editor_absoluteX="24dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:text="Choose Category"
+        android:textSize="24sp"
+
+        app:layout_constraintBottom_toTopOf="@+id/diffEasy"
+        tools:layout_editor_absoluteX="24dp" />
+
+
+    <Button
+        android:id="@+id/categoryGeneral"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="General"
+        android:textSize="18dp"
+        android:textColor="@color/colorLightSecondaryDark"
+        android:backgroundTint="@color/colorLightPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/categoryScience"
+        tools:layout_editor_absoluteX="24dp" />
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Hi player please choose your field and level"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@id/categoryFlag"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/white"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.293" />
+
+    <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Select Difficulty"
+                android:textSize="24sp"
+
+        android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/categoryFlag"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.824" />
+
+
+    <Button
+        android:id="@+id/diffEasy"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/colorLightSecondaryDark"
+        android:backgroundTint="@color/colorLightPrimary"
+        android:text="Easy"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/diffMedium"
+        tools:layout_editor_absoluteX="24dp" />
+
+
+    <Button
+        android:id="@+id/diffMedium"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Medium"
+        android:textSize="18dp"
+        android:textColor="@color/colorLightSecondaryDark"
+        android:backgroundTint="@color/colorLightPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/diffHard"
+        tools:layout_editor_absoluteX="24dp" />
+
+    <Button
+        android:id="@+id/diffHard"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="144dp"
+        android:text="Hard"
+        android:textSize="18dp"
+        android:textColor="@color/colorLightSecondaryDark"
+        android:backgroundTint="@color/colorLightPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/startQuizBtn"
+        tools:layout_editor_absoluteX="24dp" />
+
+
+    <Button
+        android:id="@+id/startQuizBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Start Quiz"
+        android:backgroundTint="@color/colorLightPrimaryDark"
+        android:textColor="@color/colorLightSecondaryDark"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

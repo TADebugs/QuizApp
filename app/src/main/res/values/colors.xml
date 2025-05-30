@@ -7,6 +7,11 @@
     <color name="colorLightAccent">#ffcf93</color>
     <color name="colorLightText">#FEF9C7</color>
     <color name="colorLightSecondaryDark">#172808</color>
+    <color name="easyGreen">#A5D6A7</color>
+    <color name="mediumYellow">#FFF59D</color>
+    <color name="hardRed">#EF9A9A</color>
+    <color name="categoryBrown">#A1887F</color>
+    <color name="defaultButton">#F5F5F5</color> <!-- or your lightPrimary -->
 
 
 </resources>

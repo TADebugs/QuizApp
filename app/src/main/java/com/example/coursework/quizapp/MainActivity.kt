@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
             if (userName.isNullOrEmpty()) {
                 nameInput.error = "Please enter your name"
             } else {
-                val intent = Intent(this, QuestionActivity::class.java)
+                val intent = Intent(this, CategoryPickerActivity::class.java)
                 intent.putExtra("USER_NAME", userName)
                 startActivity(intent)
 
